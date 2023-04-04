@@ -71,10 +71,10 @@ export default function App() {
         <Animated.View style = {[styles.formInputContainer, formAnimateStyle]}>
           <TextInput placeholder="Email" placeholderTextColor="grey" style = {styles.textinput} accessibilityLabel = "E-mail"/>
           <TextInput placeholder="Full Name" placeholderTextColor="grey" style = {styles.textinput} accessibilityLabel = "Full Name"/>
-          <TextInput secureTextEntry={true} placeholder="Password" placeholderTextColor="grey" style = {styles.textinput} accessibilityLabel = "Password" />
-          <View style= {styles.formButton} accessibilityLabel = "Log In" accessibilityHint='Logs into entered account'>
+          <TextInput placeholder="Password" placeholderTextColor="grey" style = {styles.textinput} accessibilityLabel = "Password" secureTextEntry={true}/>
+          <Pressable style= {styles.formButton} accessibilityLabel = "Log In" accessibilityHint='Logs into entered account'>
             <Text style={styles.buttonText}>LOGIN</Text>
-          </View>
+          </Pressable>
         </Animated.View>
       </View>
     </View>
