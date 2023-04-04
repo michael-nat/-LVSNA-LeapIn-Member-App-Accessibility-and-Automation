@@ -39,7 +39,7 @@ export default function App() {
   }
 
   return (
-    <View style={styles.container}  >
+    <View style={styles.container}>
       <Animated.View style={[StyleSheet.absoluteFill, imageAnimatedStyle]}>
         <Svg height={height + 60} width={width}>
           <ClipPath id="clipPathID">
@@ -52,18 +52,18 @@ export default function App() {
             clipPath="url(#clipPathID)"
           />
         </Svg>
-        <Pressable style={styles.closeButtonContainer} onPress={CloseHandler} accessibilityLabel = "Close Button">
+        <Pressable style={styles.closeButtonContainer} onPress={CloseHandler} accessibilityLabel = "Close Button" accessibilityHint='Returns to the home page'>
           <Text>X</Text>
         </Pressable>
       </Animated.View>
       <View style={styles.bottomContainer}> 
         <Animated.View style = {buttonAnimatedStyle} >
-          <Pressable style={styles.button} onPress={loginHandler} accessibilityLabel = "Log In">
+          <Pressable style={styles.button} onPress={loginHandler} accessibilityLabel = "Log In" accessibilityHint='Opens the login page'>
             <Text style={styles.buttonText}>LOGIN</Text>
           </Pressable>
         </Animated.View>
         <Animated.View style = {buttonAnimatedStyle}>
-          <Pressable style={styles.button} accessibilityLabel = "Register">
+          <Pressable style={styles.button} accessibilityLabel = "Register" accessibilityHint='Opens the register page'>
             <Text style={styles.buttonText}>REGISTER</Text>
           </Pressable>
         </Animated.View>
@@ -71,8 +71,8 @@ export default function App() {
         <Animated.View style = {[styles.formInputContainer, formAnimateStyle]}>
           <TextInput placeholder="Email" placeholderTextColor="grey" style = {styles.textinput} accessibilityLabel = "E-mail"/>
           <TextInput placeholder="Full Name" placeholderTextColor="grey" style = {styles.textinput} accessibilityLabel = "Full Name"/>
-          <TextInput placeholder="Password" placeholderTextColor="grey" style = {styles.textinput} accessibilityLabel = "Password" />
-          <View style= {styles.formButton} accessibilityLabel = "Log In">
+          <TextInput secureTextEntry={true} placeholder="Password" placeholderTextColor="grey" style = {styles.textinput} accessibilityLabel = "Password" />
+          <View style= {styles.formButton} accessibilityLabel = "Log In" accessibilityHint='Logs into entered account'>
             <Text style={styles.buttonText}>LOGIN</Text>
           </View>
         </Animated.View>
@@ -80,5 +80,3 @@ export default function App() {
     </View>
   );
 }
-
-
