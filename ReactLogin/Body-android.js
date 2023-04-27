@@ -69,7 +69,7 @@ export const Body_android = () => {
           </Animated.View>
           
           <Animated.View style = {buttonAnimatedStyle}>
-            <Pressable style={styles.button} accessibilityLabel = "Register" accessibilityHint='Opens the register page'>
+            <Pressable style={styles.button}  accessibilityLabel = "Register" accessibilityHint='Opens the register page'>
               <Text style={styles.buttonText}>REGISTER</Text>
             </Pressable>
           </Animated.View>
@@ -80,7 +80,7 @@ export const Body_android = () => {
             <TextInput placeholder="Password" placeholderTextColor="grey" style = {styles.textinput} accessibilityLabel = "Password" secureTextEntry={true}/>
             <Pressable style= {styles.formButton} accessibilityLabel = "Log In" accessibilityHint='Logs into entered account'>
               <Text style={styles.buttonText}>LOGIN</Text>
-            </Pressable>
+            </Pressable>  
           </Animated.View>
         </View>
       </View>

@@ -8,11 +8,35 @@ const styles_web = StyleSheet.create({
 });
 const styles = StyleSheet.create({
   container: {
-    flex:1,
-    justifyContent: 'flex-end'
+    
+    ...Platform.select({
+      ios:{
+        flex:1,
+        justifyContent: 'flex-end'
+      },
+      android:{
+        flex:1,
+        justifyContent: 'flex-end'
+      },
+      default:{
+        flex:1,
+        justifyContent: 'flex-end'
+      }
+    })
+  },
+  loginHeader:{
+    fontSize: 55,
+    letterSpacing: 0.5,
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontWeight: '600',
+    marginHorizontal: 20,
+    marginVertical: 10,
+    paddingLeft: 155
   },
   button: {
     backgroundColor: 'rgba(0, 71, 110, 0.8)',
+    
     height: 55,
     alignItems: 'center',
     justifyContent: 'center',
@@ -29,10 +53,40 @@ const styles = StyleSheet.create({
     letterSpacing: 0.5,
   },
   bottomContainer: {
-    
-    height: height / 3
-
+    ...Platform.select({
+      ios:{
+        height: height/3 
+      },
+      android:{
+        height: height/3 
+      },
+      default:{
+        height: height,
+        width:width/2,
+        paddingLeft: 0,
+        paddingTop:300
+      }
+    })
   },
+
+  ImageBox: {
+    ...Platform.select({
+      ios:{
+        height: height/3 
+      },
+      android:{
+        height: height/3 
+      },
+      default:{
+        height: height ,
+        width:width/2,
+        paddingLeft: 0,
+        paddingRight:200,
+      
+      }
+    })
+  },
+
   textinput: {
     ...Platform.select({
       ios: {
@@ -54,6 +108,7 @@ const styles = StyleSheet.create({
         paddingLeft: 10
       },
       default: {
+        width: width/4,
         height: 50,
         borderWidth: 1,
         borderColor: 'rgba(0,0,0,0.2)',
@@ -90,6 +145,7 @@ const styles = StyleSheet.create({
       },
       android: {
         backgroundColor: 'rgba(0, 71, 110, 0.8)',
+        
         height: 55,
         alignItems: 'center',
         justifyContent: 'center',
@@ -109,6 +165,7 @@ const styles = StyleSheet.create({
       },
       default: {
         backgroundColor: 'rgba(0, 71, 110, 0.8)',
+        width: width/4,
         height: 55,
         alignItems: 'center',
         justifyContent: 'center',
