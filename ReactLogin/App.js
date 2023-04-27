@@ -11,7 +11,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Body } from './Body';
 import RegisterScreen from './RegisterPage';
-
+import { Registers } from './Body';
 
 const Stack = createStackNavigator();
 
@@ -23,9 +23,10 @@ export default function App() {
     //<Body/>
     <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name = "Register" component={RegisterScreen} /> 
-          <Stack.Screen name = "Login" component={Body} /> 
           
+          <Stack.Screen name = "Register" component={Registers} /> 
+          <Stack.Screen name = "Login" component={Body} /> 
+         
         </Stack.Navigator>
       </NavigationContainer>
     );
