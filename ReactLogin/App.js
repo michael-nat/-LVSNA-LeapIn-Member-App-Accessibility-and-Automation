@@ -12,12 +12,15 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { Body } from './Body';
 import RegisterScreen from './RegisterPage';
 import { Registers } from './Body';
+import axe from 'axe-core';
 
 const Stack = createStackNavigator();
 
 
 
 export default function App() {
+ 
+
 
   return (
     //<Body/>

@@ -2,13 +2,14 @@ import { StyleSheet, Text, View, Dimensions, TextInput, Pressable, Platform } fr
 import styles from "./styles";
 import Svg, { Image, Ellipse, ClipPath } from 'react-native-svg';
 import Animated, { useSharedValue, useAnimatedStyle, interpolate, withTiming, withDelay } from 'react-native-reanimated';
-
+import axe from 'axe-core';
 export const Body_ios = () => {
 
   
 
     const { height, width } = Dimensions.get('window');
     const imagePosition = useSharedValue(1);
+
   
   
   
@@ -40,8 +41,10 @@ export const Body_ios = () => {
     const CloseHandler = () => {
       imagePosition.value = 1
     }
+    
   
     return (
+      
       
       <View style={styles.container}>
         <Animated.View style={[StyleSheet.absoluteFill, imageAnimatedStyle]}>
