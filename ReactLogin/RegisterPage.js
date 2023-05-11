@@ -28,6 +28,14 @@ export default function HomeScreen({ navigation }) {
   //   }
   // );
 
+  const React = require('react');
+  const ReactDOM = require('react-dom');
+
+  if (process.env.NODE_ENV !== 'production') {
+    const axe = require('@axe-core/react');
+    axe(React, ReactDOM, 1000);
+  }
+
   return (
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
       <div className="col-6">

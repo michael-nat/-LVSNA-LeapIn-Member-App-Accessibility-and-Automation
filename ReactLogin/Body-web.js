@@ -11,18 +11,25 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 export const Body_web = () => {
   const { height, width } = Dimensions.get('window');
 
-  axe
-  .run()
-  .then(results => {
-    if (results.violations.length) {
-      throw new Error('Accessibility issues found');
-    }
-  })
-  .catch(err => {
-    console.error('Something bad happened:', err.message);
-  });
+  // axe
+  // .run()
+  // .then(results => {
+  //   if (results.violations.length) {
+  //     throw new Error('Accessibility issues found');
+  //   }
+  // })
+  // .catch(err => {
+  //   console.error('Something bad happened:', err.message);
+  // });
 
+  const React = require('react');
+  const ReactDOM = require('react-dom');
 
+  if (process.env.NODE_ENV !== 'production') {
+    const axe = require('@axe-core/react');
+    axe(React, ReactDOM, 1000);
+  }
+  
   return (
 
 
