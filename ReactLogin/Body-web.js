@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, Dimensions, TextInput, Pressable, Platform } fr
 import styles from "./styles";
 import Svg, { Image, Ellipse, ClipPath } from 'react-native-svg';
 import Animated, { useSharedValue, useAnimatedStyle, interpolate, withTiming, withDelay } from 'react-native-reanimated';
+import 'react-native-accessibility-engine';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -10,6 +11,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 export const Body_web = () => {
   const { height, width } = Dimensions.get('window');
+  
+
 
 
   return (
@@ -26,7 +29,7 @@ export const Body_web = () => {
             <TextInput placeholder="Email" placeholderTextColor="grey" style={styles.textinput} accessibilityLabel="E-mail" />
             <TextInput placeholder="Password" placeholderTextColor="grey" style={styles.textinput} accessibilityLabel="Password" secureTextEntry={true} />
 
-            <Pressable style={styles.formButton} onPress={() => navigation.navigate("Register")} accessibilityLabel="Log In" accessibilityHint='Logs into entered account'>
+            <Pressable style={styles.formButton} accessibilityLabel="Log In" accessibilityHint='Logs into entered account'>
               <Text style={styles.buttonText} >LOGIN</Text>
             </Pressable>
           </View>

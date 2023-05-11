@@ -8,8 +8,8 @@ export default function HomeScreen({ navigation }) {
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
       <div class="col-6">
 
-        <View style={styles.bottomContainer}>
-          <Text style={styles.loginHeader} accessibilityLabel="Login">REGISTER</Text>
+        <View style={styles.RegBottomContainer}>
+          <Text style={styles.regHeader} accessibilityLabel="Login">REGISTER</Text>
           <TextInput placeholder="Email" placeholderTextColor="grey" style={styles.textinput} accessibilityLabel="E-mail" />
           <TextInput placeholder="Full Name" placeholderTextColor="grey" style={styles.textinput} accessibilityLabel="Full Name" />
           <TextInput placeholder="Phone Number" placeholderTextColor="grey" style={styles.textinput} accessibilityLabel="Phone Number" />
