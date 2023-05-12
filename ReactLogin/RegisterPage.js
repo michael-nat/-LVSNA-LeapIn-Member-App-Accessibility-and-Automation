@@ -40,10 +40,11 @@ export default function HomeScreen({ navigation }) {
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
       <div className="col-6">
 
-        <View style={styles.bottomContainer}>
-        <script src="node_modules/axe-core/axe.min.js"></script>
 
-          <Text style={styles.loginHeader} accessibilityLabel="Login">REGISTER</Text>
+        <View style={styles.RegBottomContainer}>
+        <script src="node_modules/axe-core/axe.min.js"></script>
+          <Text style={styles.regHeader} accessibilityLabel="Login">REGISTER</Text>
+          
           <form>
           <TextInput placeholder="Email" placeholderTextColor="grey" style={styles.textinput} accessibilityLabel="E-mail" />
           <TextInput placeholder="Full Name" placeholderTextColor="grey" style={styles.textinput} accessibilityLabel="Full Name" />

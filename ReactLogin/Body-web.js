@@ -45,9 +45,8 @@ export const Body_web = () => {
             <TextInput placeholder="Email" placeholderTextColor="grey" style={styles.textinput} accessibilityLabel="E-mail" />
             <TextInput placeholder="Password" placeholderTextColor="grey" style={styles.textinput} accessibilityLabel="Password" secureTextEntry={true} />
             </form>
-          
 
-            <Pressable style={styles.formButton} onPress={() => navigation.navigate("Register")} accessibilityLabel="Log In" accessibilityHint='Logs into entered account'>
+            <Pressable style={styles.formButton} accessibilityLabel="Log In" accessibilityHint='Logs into entered account'>
               <Text style={styles.buttonText} >LOGIN</Text>
             </Pressable>
           </View>

@@ -34,6 +34,16 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     paddingLeft: 155
   },
+  regHeader:{
+    fontSize: 55,
+    letterSpacing: 0.5,
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontWeight: '600',
+    marginHorizontal: 20,
+    marginVertical: 10,
+    paddingLeft: 120
+  },
   button: {
     backgroundColor: 'rgba(0, 71, 110, 0.8)',
     
@@ -63,8 +73,24 @@ const styles = StyleSheet.create({
       default:{
         height: height,
         width:width/2,
-        paddingLeft: 0,
+        paddingLeft: 200,
         paddingTop:300
+      }
+    })
+  },
+  RegBottomContainer: {
+    ...Platform.select({
+      ios:{
+        height: height/3 
+      },
+      android:{
+        height: height/3 
+      },
+      default:{
+        height: height -200,
+        width:width/2,
+        paddingLeft: width/8,
+        paddingTop:30
       }
     })
   },
