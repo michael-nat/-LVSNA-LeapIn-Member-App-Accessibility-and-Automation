@@ -6,7 +6,7 @@ import axe from 'axe-core';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-
+//This is fixed
 
 export const Body_web = () => {
   const { height, width } = Dimensions.get('window');
